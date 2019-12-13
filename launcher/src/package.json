@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
-    "react-bangle-lib": "^1.0.2",
+    "react-bangle-lib": "^1.0.3",
     "react-scripts": "3.3.0",
     "yoga-layout-prebuilt": "^1.9.3"
   },
