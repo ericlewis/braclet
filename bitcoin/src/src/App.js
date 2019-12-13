@@ -27,7 +27,6 @@ function App() {
 
   useEffect(() => {
     window.buttonPressed = () => {
-      setTicker(null)
       fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
       .then((o)=> o.json ? o.json() : JSON.parse(o))
       .then(setTicker)
@@ -37,7 +36,7 @@ function App() {
   }, []);
 
   return (
-    <view style={{paddingTop: 10}}>
+    <view>
       {ticker === null ? <text>Loading...</text> : <text>{ticker.chartName}</text>}
       {ticker === null ? null : <Details ticker={ticker} />}
     </view>
