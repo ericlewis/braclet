@@ -26,13 +26,9 @@ function App() {
   const [ticker, setTicker] = React.useState(null);
 
   useEffect(() => {
-    window.buttonPressed = () => {
-      fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
-      .then((o)=> o.json ? o.json() : JSON.parse(o))
-      .then(setTicker)
-    }
-
-    window.buttonPressed()
+    fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+    .then((o)=> o.json ? o.json() : JSON.parse(o))
+    .then(setTicker)
   }, []);
 
   return (
