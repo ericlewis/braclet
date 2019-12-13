@@ -5,7 +5,7 @@ function App() {
 
   useEffect(() => {
     window.buttonPressed = () => {
-      fetch("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
+      fetch("https://quotes.stormconsultancy.co.uk/random.json")
       .then((o)=> o.json ? o.json() : JSON.parse(o))
       .then(setQuote)
     }
@@ -16,7 +16,7 @@ function App() {
   return (
     <view style={{paddingTop: 10}}>
       {quote === null ? <text>Loading...</text> : <text>Random Quote</text>}
-      {quote === null ? null : <text>{quote.quoteText}</text>}
+      {quote === null ? null : <text>{quote.quote}</text>}
     </view>
   );
 }
