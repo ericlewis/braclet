@@ -27,7 +27,6 @@ function App() {
 
   useEffect(() => {
     window.buttonPressed = () => {
-      setTicker(null)
       fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
       .then((o)=> o.json ? o.json() : JSON.parse(o))
       .then(setTicker)
